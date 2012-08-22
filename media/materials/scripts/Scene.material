@@ -1,0 +1,44 @@
+material Scene/BaseCube
+{
+	technique
+    {
+       pass
+        {
+
+            lighting on
+
+            ambient 0.3 0.3 0.3 1
+            diffuse 0 0 0 1
+            emissive 0 0 0 1
+
+       }
+    }
+}
+
+material Scene/Ground
+ {
+    technique
+    {
+       pass
+        {
+            texture_unit
+            {
+                texture grass.png
+            }
+            texture_unit
+            {
+                 texture alpha_blend2.png
+                 colour_op alpha_blend
+            }
+            texture_unit
+            {
+                 texture dirt.jpg
+                 colour_op_ex blend_current_alpha src_texture src_current
+            }
+       }
+    }
+ }
+
+
+
+

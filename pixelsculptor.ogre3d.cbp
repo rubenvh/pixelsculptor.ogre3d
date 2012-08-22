@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="pixelsculptor.ogre3d" />
+		<Option pch_mode="2" />
+		<Option compiler="gcc" />
+		<Build>
+			<Target title="Debug">
+				<Option output="./pixelsculptor.ogre3d" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Debug/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-g" />
+					<Add directory="/home/ruben/lib/opencv/include" />
+				</Compiler>
+				<Linker>
+					<Add library="/home/ruben/lib/opencv/lib/libopencv_calib3d.so" />
+					<Add library="/home/ruben/lib/opencv/lib/libopencv_contrib.so" />
+					<Add library="/home/ruben/lib/opencv/lib/libopencv_core.so" />
+					<Add library="/home/ruben/lib/opencv/lib/libopencv_features2d.so" />
+					<Add library="/home/ruben/lib/opencv/lib/libopencv_flann.so" />
+					<Add library="/home/ruben/lib/opencv/lib/libopencv_gpu.so" />
+					<Add library="/home/ruben/lib/opencv/lib/libopencv_highgui.so" />
+					<Add library="/home/ruben/lib/opencv/lib/libopencv_imgproc.so" />
+					<Add library="/home/ruben/lib/opencv/lib/libopencv_legacy.so" />
+					<Add library="/home/ruben/lib/opencv/lib/libopencv_ml.so" />
+					<Add library="/home/ruben/lib/opencv/lib/libopencv_objdetect.so" />
+					<Add library="/home/ruben/lib/opencv/lib/libopencv_stitching.so" />
+					<Add library="/home/ruben/lib/opencv/lib/libopencv_video.so" />
+				</Linker>
+			</Target>
+			<Target title="Release">
+				<Option output="./pixelsculptor.ogre3d" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Release/" />
+				<Option type="0" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-O2" />
+				</Compiler>
+				<Linker>
+					<Add option="-s" />
+				</Linker>
+			</Target>
+		</Build>
+		<Compiler>
+			<Add option="-Wall" />
+			<Add option="`pkg-config --cflags OGRE`" />
+			<Add option="-fexceptions" />
+			<Add option="-I/usr/include/OIS" />
+		</Compiler>
+		<Linker>
+			<Add option="`pkg-config --libs libconfig++`" />
+			<Add library="GL" />
+			<Add library="OgreMain" />
+			<Add library="OIS" />
+			<Add directory="/bin/Debug" />
+			<Add directory="/bin/Release" />
+		</Linker>
+		<Unit filename="config.cfg" />
+		<Unit filename="include/BaseApplication.h" />
+		<Unit filename="include/CaptureCubeUpdater.h" />
+		<Unit filename="include/Configuration.h" />
+		<Unit filename="include/CubeUpdater.h" />
+		<Unit filename="include/ImageCubeUpdater.h" />
+		<Unit filename="include/OpenCVCapture.h" />
+		<Unit filename="include/OpenCVTexture.h" />
+		<Unit filename="include/TutorialApplication.h" />
+		<Unit filename="include/grid.h" />
+		<Unit filename="main.cpp" />
+		<Unit filename="media/materials/scripts/Ogre.material" />
+		<Unit filename="media/materials/scripts/Scene.material" />
+		<Unit filename="media/materials/textures/GreenSkin.jpg" />
+		<Unit filename="media/materials/textures/spheremap.png" />
+		<Unit filename="media/materials/textures/tusk.jpg" />
+		<Unit filename="media/models/Cube.001.mesh" />
+		<Unit filename="media/models/Cylinder.mesh" />
+		<Unit filename="media/models/ogrehead.mesh" />
+		<Unit filename="media/packs/SdkTrays.zip" />
+		<Unit filename="plugins.cfg" />
+		<Unit filename="resources.cfg" />
+		<Unit filename="src/BaseApplication.cpp" />
+		<Unit filename="src/CaptureCubeUpdater.cpp" />
+		<Unit filename="src/Configuration.cpp" />
+		<Unit filename="src/CubeUpdater.cpp" />
+		<Unit filename="src/ImageCubeUpdater.cpp" />
+		<Unit filename="src/OpenCVCapture.cpp" />
+		<Unit filename="src/OpenCVTexture.cpp" />
+		<Unit filename="src/TutorialApplication.cpp" />
+		<Unit filename="src/grid.cpp" />
+		<Extensions>
+			<envvars />
+			<code_completion />
+			<lib_finder disable_auto="1" />
+			<debugger />
+		</Extensions>
+	</Project>
+</CodeBlocks_project_file>
